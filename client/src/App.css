@@ -1,0 +1,200 @@
+*{
+  box-sizing: border-box;
+}
+a{
+  cursor: pointer;
+}
+body{
+  color: #222;
+}
+img{
+  max-width: 100%;
+  border-radius: 20px;
+  border: 3px dotted black;
+}
+
+main{
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  color: black;
+}
+header a{
+  text-decoration:none;
+  color: inherit;
+}
+header a.logo{
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: 'Alkatra', cursive;
+}
+header nav{
+  display:flex;
+  gap: 24px;
+}
+
+div.post{
+  display: grid;
+  box-shadow: 10px 10px #222;
+  background-color:#f1f5f9;
+  border-radius: 20px;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+div.post:hover{
+  background-color: #ccfbf1;
+  border: 2px dashed black;
+  scale: 1.05;
+  transition: 0.3s;
+}
+div.image{
+  border-radius: 20px;
+}
+
+@keyframes rotation {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(5deg);} 
+  75% {transform: rotate(-5deg);}  
+  100% {transform: rotate(0deg);}
+}
+div.coverimg:hover{
+  scale: 0.9;
+  transition: 0.3s;
+  border: 2px dashed black;
+  animation: rotation 1s infinite linear;
+}
+@media screen and (min-width: 700px) {
+  div.post{
+      grid-template-columns: 1fr 1.7fr;
+  }
+}
+
+div.post div.texts h2{
+  margin:0;
+  font-size: 1.5rem;
+}
+div.post:hover div.texts h2{
+  font-size: 2.5rem;
+  transition: 0.5s;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+div.post div.texts a{
+  text-decoration:none;
+  color: inherit;
+}
+div.post p.info{
+  margin:24px 0;
+  color: black;
+  font-size:1.05rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+div.post p.info a.author{
+  color:#333;
+}
+div.post p.summary{
+  margin:10px 0;
+  line-height: 2rem;
+}
+
+form.login, form.register{
+  max-width: 500px;
+  margin: 0 auto;
+}
+input{
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 20px 10px;
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: #fff;
+}
+button{
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border:0;
+  color: #fff;
+  border-radius: 15px;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+}
+button:hover{
+  background-color: #99f6e4;
+  color: #222;
+  border: 2px dashed black;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+form.login h1, form.register h1{
+  text-align: center;
+}
+
+div.post-page div.image{
+  max-height:450px;
+  display: flex;
+  overflow:hidden;
+}
+div.post-page div.image img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+div.post-page a{
+  color:#333;
+  text-decoration: underline;
+}
+div.post-page h1{
+  text-align: center;
+  margin: 10px 0 5px;
+}
+div.post-page time{
+  text-align: center;
+  display: block;
+  font-size:1rem;
+  color:#aaa;
+  margin: 10px 0;
+}
+div.post-page div.author{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+div.content p{
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+div.content li{
+  margin-bottom: 10px;
+}
+div.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+}
+div.post-page a.edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding:15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a svg{
+  height:20px;
+}

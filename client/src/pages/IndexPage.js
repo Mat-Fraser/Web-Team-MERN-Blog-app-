@@ -4,7 +4,7 @@ import Post from "../Post";
 export default function IndexPage() {
   const [posts,setPosts] = useState([]);
   useEffect(() => {
-    fetch('https://webteams.onrender.com/post').then(response =>{
+    fetch('https://webteam.onrender.com/post').then(response =>{
       response.json().then(posts =>{
         setPosts(posts);
       });

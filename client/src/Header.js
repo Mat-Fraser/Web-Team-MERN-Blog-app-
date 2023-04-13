@@ -5,7 +5,7 @@ import {UserContext} from "./UserContext";
 export default function Header(){
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('https://webteams.onrender.com/profile', {
+    fetch('https://webteam.onrender.com/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -15,7 +15,7 @@ export default function Header(){
   }, []);
 
   function logout() {
-    fetch('https://webteams.onrender.com/logout', {
+    fetch('https://webteam.onrender.com/logout', {
       credentials: 'include',
       method: 'POST',
     });
